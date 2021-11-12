@@ -62,6 +62,7 @@ const useFirebase = () => {
             if (user) {
                 setUser(user);
 
+
             } else {
                 setUser({})
             }
@@ -71,11 +72,11 @@ const useFirebase = () => {
     }, [auth])
 
 
-    /*   useEffect(() => {
-          fetch(`http://localhost:5000/users/${user.email}`)
-              .then(res => res.json())
-              .then(data => setAdmin(data.admin))
-      }, [user.email]) */
+    useEffect(() => {
+        fetch(`http://localhost:5000/users/${user.email}`)
+            .then(res => res.json())
+            .then(data => setAdmin(data.admin))
+    }, [user.email])
 
     const logout = () => {
         setIsLoading(true);

@@ -30,7 +30,7 @@ import { Button } from '@mui/material';
 
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 
-// import useAuth from '../../../hooks/useAuth';
+import useAuth from '../../../hooks/useAuth';
 import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 import AddProduct from '../AddProduct/AddProduct';
 import ManageProducts from '../ManageProducts/ManageProducts';
@@ -43,8 +43,8 @@ function Dashboard(props) {
     const [mobileOpen, setMobileOpen] = React.useState(false);
     let { path, url } = useRouteMatch();
 
-    /* const { admin } = useAuth();
- */
+    const { admin, logout } = useAuth();
+
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
@@ -55,16 +55,15 @@ function Dashboard(props) {
             <Divider />
             <Link to="/cars"> <Button color="inherit">All Cars</Button></Link>
             <Link to={`${url}`}> <Button color="inherit">Dashboard</Button></Link>
-            <Link to={`${url}/makeAdmin`}> <Button color="inherit">Make Admin</Button></Link>
-            <Link to={`${url}/addProduct`}> <Button color="inherit">Add Product</Button></Link>
-            <Link to={`${url}/manageOrders`}> <Button color="inherit">Manage Orders</Button></Link>
-            <Link to={`${url}/manageProducts`}> <Button color="inherit">Manage Products</Button></Link>
+            <Button onClick={logout} color="inherit">Logout</Button>
             <Link to={`${url}/myOrder`}> <Button color="inherit">My Order</Button></Link>
 
-            {/*    {admin && <Box>
+            {admin && <Box>
                 <Link to={`${url}/makeAdmin`}> <Button color="inherit">Make Admin</Button></Link>
+                <Link to={`${url}/manageOrders`}> <Button color="inherit">Manage Orders</Button></Link>
+                <Link to={`${url}/manageProducts`}> <Button color="inherit">Manage Products</Button></Link>
                 <Link to={`${url}/addProduct`}> <Button color="inherit">Add Product</Button></Link>
-            </Box>} */}
+            </Box>}
 
             <List>
                 {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
@@ -146,18 +145,7 @@ function Dashboard(props) {
                 <Toolbar />
 
                 <Switch>
-                    <Route exact path={`${path}/addProduct`}>
-                        <AddProduct></AddProduct>
-                    </Route>
-                    <Route exact path={`${path}/makeAdmin`}>
-                        <MakeAdmin></MakeAdmin>
-                    </Route>
-                    <Route exact path={`${path}/manageProducts`}>
-                        <ManageProducts></ManageProducts>
-                    </Route>
-                    <Route exact path={`${path}/manageOrders`}>
-                        <ManageOrders></ManageOrders>
-                    </Route>
+
                     <Route exact path={`${path}/myOrder`}>
                         <MyOrder></MyOrder>
                     </Route>
@@ -166,6 +154,13 @@ function Dashboard(props) {
                     </AdminRoute>
                     <AdminRoute path={`${path}/addDoctor`}>
                         <AddProduct></AddProduct>
+                    </AdminRoute>
+
+                    <AdminRoute exact path={`${path}/manageProducts`}>
+                        <ManageProducts></ManageProducts>
+                    </AdminRoute>
+                    <AdminRoute exact path={`${path}/manageOrders`}>
+                        <ManageOrders></ManageOrders>
                     </AdminRoute>
                 </Switch>
 
