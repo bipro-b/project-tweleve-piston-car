@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Sedan",
+        "img": "https://imgd.aeplcdn.com/600x337/n/cw/ec/41197/hyundai-verna-right-front-three-quarter7.jpeg",
+        "price": "456",
+        "description": "Best quality car for driving and for journey.",
+        "phone": "012349034"
+    },
+    {
+        "name": "Coupe",
+        "img": "https://static.tcimg.net/vehicles/primary/c7b960c6cfb04dcb/2021-BMW-4_Series-white-full_color-driver_side_front_quarter.png",
+        "price": "570",
+        "description": "Best quality car for driving and for journey.",
+        "phone": "0123490345"
+    },
+    {
+        "name": "Sports Car",
+        "img": "https://thesmedia.id/uploads/posts/large-Taa0WkV0Vel8994OKiAmhYX5MIYyMXZx.jpg",
+        "Price": "789",
+        "description": "For sports , soprters can use it for thwir journey.",
+        "phone": "01234903423"
+    },
+    {
+        "name": "Station Wagon",
+        "img": "https://i.insider.com/5a8def12391d941a008b4609?width=1136&format=jpeg",
+        "price": "478",
+        "description": "Station Wagon is famous car now. Its features are robustic",
+        "phone": "01234903478"
+    },
+    {
+        "name": "Hatchback",
+        "img": "https://www.rushlane.com/wp-content/uploads/2020/11/honda-city-hatchback-2020-launch.jpg",
+        "price": "690",
+        "description": "It is fastest car for driving . Expense of octen is low. ",
+        "phone": "01234903427"
+    },
+    {
+        "name": "Convertible",
+        "img": "https://www.automobilemag.com/uploads/sites/5/2018/11/2019-Bentley-Continental-GT-Convertible-side.jpg",
+        "price": "890",
+        "description": "Hey,Best quality car for driving and for journey.",
+        "phone": "01234903479"
+    },
+    {
+        "name": "Convertible",
+        "img": "https://www.automobilemag.com/uploads/sites/5/2018/11/2019-Bentley-Continental-GT-Convertible-side.jpg",
+        "price": "890",
+        "description": "Hey, Are you not vaccinited still?? Hurry up  Here is the surokkha app link register quick.",
+        "phone": "01234903479"
+    },
+    {
+        "name": "Convertible",
+        "img": "https://www.automobilemag.com/uploads/sites/5/2018/11/2019-Bentley-Continental-GT-Convertible-side.jpg",
+        "price": "890",
+        "description": "Hey, Are you not vaccinited still?? Hurry up  Here is the surokkha app link register quick.",
+        "phone": "01234903479"
+    },
+    {
+        "name": "Convertible",
+        "img": "https://www.automobilemag.com/uploads/sites/5/2018/11/2019-Bentley-Continental-GT-Convertible-side.jpg",
+        "price": "890",
+        "description": "Hey, Are you not vaccinited still?? Hurry up  Here is the surokkha app link register quick.",
+        "phone": "01234903479"
+    },
+    {
+        "name": "Convertible",
+        "img": "https://www.automobilemag.com/uploads/sites/5/2018/11/2019-Bentley-Continental-GT-Convertible-side.jpg",
+        "price": "890",
+        "description": "Hey, Are you not vaccinited still?? Hurry up  Here is the surokkha app link register quick.",
+        "phone": "01234903479"
+    }
+]
