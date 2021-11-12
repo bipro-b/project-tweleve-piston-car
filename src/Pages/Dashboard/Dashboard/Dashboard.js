@@ -6,12 +6,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -22,7 +16,8 @@ import {
     Route,
     Link,
 
-    useRouteMatch
+    useRouteMatch,
+    NavLink
 } from "react-router-dom";
 import { Button } from '@mui/material';
 
@@ -53,28 +48,21 @@ function Dashboard(props) {
         <div>
             <Toolbar />
             <Divider />
-            <Link to="/cars"> <Button color="inherit">All Cars</Button></Link>
-            <Link to={`${url}`}> <Button color="inherit">Dashboard</Button></Link>
-            <Button onClick={logout} color="inherit">Logout</Button>
-            <Link to={`${url}/myOrder`}> <Button color="inherit">My Order</Button></Link>
+            <Box sx={{ textAlign: 'left' }}>
+                <Link style={{ textDecoration: 'none' }} to="/cars"> <Button color="inherit">All Cars</Button></Link> <br />
 
-            {admin && <Box>
-                <Link to={`${url}/makeAdmin`}> <Button color="inherit">Make Admin</Button></Link>
-                <Link to={`${url}/manageOrders`}> <Button color="inherit">Manage Orders</Button></Link>
-                <Link to={`${url}/manageProducts`}> <Button color="inherit">Manage Products</Button></Link>
-                <Link to={`${url}/addProduct`}> <Button color="inherit">Add Product</Button></Link>
+                <Button onClick={logout} color="inherit">Logout</Button> <br />
+                <Link style={{ textDecoration: 'none' }} to={`${url}/myOrder`}> <Button color="inherit">My Order</Button></Link><br />
+            </Box>
+
+            {admin && <Box sx={{ textAlign: 'left' }}>
+                <Link style={{ textDecoration: 'none' }} to={`${url}/makeAdmin`}> <Button color="inherit">Make Admin</Button></Link><br />
+                <Link style={{ textDecoration: 'none' }} to={`${url}/manageOrders`}> <Button color="inherit">Manage Orders</Button></Link><br />
+                <Link style={{ textDecoration: 'none' }} to={`${url}/manageProducts`}> <Button color="inherit">Manage Products</Button></Link><br />
+                <Link style={{ textDecoration: 'none' }} to={`${url}/addProduct`}> <Button color="inherit">Add Product</Button></Link>
             </Box>}
 
-            <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>
-                            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                        </ListItemIcon>
-                        <ListItemText primary={text} />
-                    </ListItem>
-                ))}
-            </List>
+
 
         </div>
     );
@@ -101,8 +89,11 @@ function Dashboard(props) {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" noWrap component="div">
+                    <Typography sx={{ textAlign: 'center' }} variant="h6" noWrap component="div">
                         Dashboard
+                    </Typography>
+                    <Typography variant="h6" noWrap component="div">
+                        <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/home"><Button color="inherit">Home</Button></NavLink>
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -146,20 +137,20 @@ function Dashboard(props) {
 
                 <Switch>
 
-                    <Route exact path={`${path}/myOrder`}>
+                    <Route path={`${path}/myOrder`}>
                         <MyOrder></MyOrder>
                     </Route>
                     <AdminRoute path={`${path}/makeAdmin`}>
                         <MakeAdmin></MakeAdmin>
                     </AdminRoute>
-                    <AdminRoute path={`${path}/addDoctor`}>
+                    <AdminRoute path={`${path}/addProduct`}>
                         <AddProduct></AddProduct>
                     </AdminRoute>
 
-                    <AdminRoute exact path={`${path}/manageProducts`}>
+                    <AdminRoute path={`${path}/manageProducts`}>
                         <ManageProducts></ManageProducts>
                     </AdminRoute>
-                    <AdminRoute exact path={`${path}/manageOrders`}>
+                    <AdminRoute path={`${path}/manageOrders`}>
                         <ManageOrders></ManageOrders>
                     </AdminRoute>
                 </Switch>

@@ -1,8 +1,9 @@
-import { Button, Card, CardContent, CardMedia, Grid, Typography } from '@mui/material';
+import { Card, CardContent, CardMedia, Grid, Typography } from '@mui/material';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Car = (props) => {
-    const { img, name, description, price } = props.car;
+    const { img, name, description, price, _id } = props.car;
     return (
         <Grid item xs={4} sm={4} md={4} >
             <Card sx={{ minWidth: 350, border: 0, boxShadow: 0 }}>
@@ -25,7 +26,7 @@ const Car = (props) => {
                         Price: ${price}
                     </Typography>
                 </CardContent>
-                <Button variant="contained">Buy Now</Button>
+                <Link to={`/car/${_id}`}> <button style={{ alignItems: 'center', marginLeft: "40px", backgroundColor: 'lavender' }} className="btn btn-primary ms-40px">Buy Now</button></Link>
             </Card>
         </Grid>
     );
