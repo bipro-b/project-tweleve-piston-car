@@ -15,7 +15,7 @@ const Banner = () => {
 
                 <Grid item sm={12} md={7}>
 
-                    <img src={banner} alt="" />
+                    <img style={{ width: '100%' }} src={banner} alt="" />
                 </Grid>
 
             </Grid>

@@ -31,6 +31,7 @@ import AddProduct from '../AddProduct/AddProduct';
 import ManageProducts from '../ManageProducts/ManageProducts';
 import ManageOrders from '../ManageOrders/ManageOrders';
 import MyOrder from '../MyOrder/MyOrder';
+import CustomerReview from '../CustomerReview/CustomerReview';
 const drawerWidth = 200;
 
 function Dashboard(props) {
@@ -52,7 +53,12 @@ function Dashboard(props) {
                 <Link style={{ textDecoration: 'none' }} to="/cars"> <Button color="inherit">All Cars</Button></Link> <br />
 
                 <Button onClick={logout} color="inherit">Logout</Button> <br />
-                <Link style={{ textDecoration: 'none' }} to={`${url}/myOrder`}> <Button color="inherit">My Order</Button></Link><br />
+                {admin || <Box>
+                    <Link style={{ textDecoration: 'none' }} to={`${url}/myOrder`}> <Button color="inherit">My Order</Button></Link><br />
+                    <Link style={{ textDecoration: 'none' }} to={`${url}/review`}> <Button color="inherit">Review</Button></Link><br />
+                </Box>
+
+                }
             </Box>
 
             {admin && <Box sx={{ textAlign: 'left' }}>
@@ -136,7 +142,9 @@ function Dashboard(props) {
                 <Toolbar />
 
                 <Switch>
-
+                    <Route path={`${path}/review`}>
+                        <CustomerReview></CustomerReview>
+                    </Route>
                     <Route path={`${path}/myOrder`}>
                         <MyOrder></MyOrder>
                     </Route>
