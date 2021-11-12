@@ -1,8 +1,11 @@
-import { Card, CardContent, Grid, Typography } from '@mui/material';
-import React from 'react';
+import { Card, CardContent, Grid, Rating, Typography } from '@mui/material';
+import React, { useState } from 'react';
 
-const singleReview = (props) => {
+
+const SingleReview = (props) => {
+
     const { name, comment, rating } = props.review;
+    const [value, setValue] = useState(rating);
     console.log(props.review)
     return (
         <Grid item xs={4} sm={4} md={4} >
@@ -17,8 +20,15 @@ const singleReview = (props) => {
                     <Typography variant="body2" color="text.secondary">
                         {comment}
                     </Typography>
-                    <Typography variant="h5" component="div">
-                        {rating}
+                    <Typography variant="h5" component="legend">
+                        <Rating
+                            name="read-only"
+                            value={value}
+                            onChange={(event, rating) => {
+                                setValue(rating);
+                            }}
+                            readOnly />
+
                     </Typography>
                 </CardContent>
 
@@ -27,4 +37,4 @@ const singleReview = (props) => {
     );
 };
 
-export default singleReview;
+export default SingleReview;
