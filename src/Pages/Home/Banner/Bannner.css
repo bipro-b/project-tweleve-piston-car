@@ -1,0 +1,15 @@
+ img{
+    /* width: 556px; */
+    /* height: 438px; */
+
+    width: 550px;
+    /* position: absolute; */
+    /* top: 153px; */
+    /* right: 100px; */
+    transition: transform 2s ease-in-out;
+
+}
+.banner-container:hover  img{
+
+   transform: translateX(-150px);
+}

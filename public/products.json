@@ -22,51 +22,51 @@
     },
     {
         "name": "Station Wagon",
-        "img": "https://i.insider.com/5a8def12391d941a008b4609?width=1136&format=jpeg",
+        "img": "https://cdn.pixabay.com/photo/2020/11/14/21/43/car-5744061_1280.png",
         "price": "478",
         "description": "Station Wagon is famous car now. Its features are robustic",
         "phone": "01234903478"
     },
     {
         "name": "Hatchback",
-        "img": "https://www.rushlane.com/wp-content/uploads/2020/11/honda-city-hatchback-2020-launch.jpg",
+        "img": "https://www.monzarentacar.com/wp-content/uploads/2019/03/fiat-tipo-sw.png",
         "price": "690",
         "description": "It is fastest car for driving . Expense of octen is low. ",
         "phone": "01234903427"
     },
     {
         "name": "Convertible",
-        "img": "https://www.automobilemag.com/uploads/sites/5/2018/11/2019-Bentley-Continental-GT-Convertible-side.jpg",
+        "img": "https://sx-content-labs.sixt.io/Media/8fleet-1050x600/bmw-4er-cabrio-2d-weiss-2017.png",
         "price": "890",
         "description": "Hey,Best quality car for driving and for journey.",
         "phone": "01234903479"
     },
     {
-        "name": "Convertible",
-        "img": "https://www.automobilemag.com/uploads/sites/5/2018/11/2019-Bentley-Continental-GT-Convertible-side.jpg",
+        "name": "Minivan",
+        "img": "https://static7.depositphotos.com/1017146/793/i/950/depositphotos_7938752-stock-photo-delivery-van.jpg",
         "price": "890",
-        "description": "Hey, Are you not vaccinited still?? Hurry up  Here is the surokkha app link register quick.",
+        "description": "Minivans are the workhorses of the family-car world, the best at carrying people and cargo in an efficient package.",
         "phone": "01234903479"
     },
     {
-        "name": "Convertible",
-        "img": "https://www.automobilemag.com/uploads/sites/5/2018/11/2019-Bentley-Continental-GT-Convertible-side.jpg",
+        "name": "Pickup Truck",
+        "img": "https://preview.free3d.com/img/2019/08/2398834183632848001/offb3ski-900.jpg",
         "price": "890",
-        "description": "Hey, Are you not vaccinited still?? Hurry up  Here is the surokkha app link register quick.",
+        "description": "A pickup truck has a passenger cab and an open cargo bed in the rear. Virtually all pickups offer some form of all-wheel drive or part-time four-wheel drive—the latter for off-road use only. .",
         "phone": "01234903479"
     },
     {
-        "name": "Convertible",
-        "img": "https://www.automobilemag.com/uploads/sites/5/2018/11/2019-Bentley-Continental-GT-Convertible-side.jpg",
+        "name": "BMW Car",
+        "img": "https://www.bmw.com.bd/content/dam/bmw/common/all-models/3-series/sedan/2018/navigation/bmw-3-series-modellfinder.png",
         "price": "890",
-        "description": "Hey, Are you not vaccinited still?? Hurry up  Here is the surokkha app link register quick.",
+        "description": "Featuring new episodes each week, in which our hosts take you on exciting journeys and talk about innovative technologies, lifestyle, design, cars and more. Find and subscribe to Changing Lanes on all major podcasting platforms..",
         "phone": "01234903479"
     },
     {
-        "name": "Convertible",
-        "img": "https://www.automobilemag.com/uploads/sites/5/2018/11/2019-Bentley-Continental-GT-Convertible-side.jpg",
+        "name": "Jeep",
+        "img": "https://www.jeep.com.bd/content/dam/cross-regional/asean/jeep/common/bhp/lineup/drive_forward/Jeep-Vehicle-Lineup-Gladiator-Hydro-Blue-Overland.jpg.img.500.jpg",
         "price": "890",
-        "description": "Hey, Are you not vaccinited still?? Hurry up  Here is the surokkha app link register quick.",
+        "description": "Jeep is like Kleenex.  It’s a product model that’s become synonymous with an entire product line.  Jeep, as a model, is designed and built by Fiat Chrysler Automobiles.  .",
         "phone": "01234903479"
     }
 ]

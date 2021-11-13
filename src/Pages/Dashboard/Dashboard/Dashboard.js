@@ -32,6 +32,8 @@ import ManageProducts from '../ManageProducts/ManageProducts';
 import ManageOrders from '../ManageOrders/ManageOrders';
 import MyOrder from '../MyOrder/MyOrder';
 import CustomerReview from '../CustomerReview/CustomerReview';
+import Pay from '../Pay/Pay';
+import CarShow from '../CarShow/CarShow';
 const drawerWidth = 200;
 
 function Dashboard(props) {
@@ -52,10 +54,12 @@ function Dashboard(props) {
             <Box sx={{ textAlign: 'left' }}>
                 <Link style={{ textDecoration: 'none' }} to="/cars"> <Button color="inherit">All Cars</Button></Link> <br />
 
-                <Button onClick={logout} color="inherit">Logout</Button> <br />
+
                 {admin || <Box>
                     <Link style={{ textDecoration: 'none' }} to={`${url}/myOrder`}> <Button color="inherit">My Order</Button></Link><br />
                     <Link style={{ textDecoration: 'none' }} to={`${url}/review`}> <Button color="inherit">Review</Button></Link><br />
+                    <Link style={{ textDecoration: 'none' }} to={`${url}/pay`}> <Button color="inherit">Pay Now</Button></Link><br />
+                    <Button onClick={logout} color="inherit">Logout</Button> <br />
                 </Box>
 
                 }
@@ -65,7 +69,8 @@ function Dashboard(props) {
                 <Link style={{ textDecoration: 'none' }} to={`${url}/makeAdmin`}> <Button color="inherit">Make Admin</Button></Link><br />
                 <Link style={{ textDecoration: 'none' }} to={`${url}/manageOrders`}> <Button color="inherit">Manage Orders</Button></Link><br />
                 <Link style={{ textDecoration: 'none' }} to={`${url}/manageProducts`}> <Button color="inherit">Manage Products</Button></Link><br />
-                <Link style={{ textDecoration: 'none' }} to={`${url}/addProduct`}> <Button color="inherit">Add Product</Button></Link>
+                <Link style={{ textDecoration: 'none' }} to={`${url}/addProduct`}> <Button color="inherit">Add Product</Button></Link> <br />
+                <Button onClick={logout} color="inherit">Logout</Button>
             </Box>}
 
 
@@ -142,8 +147,12 @@ function Dashboard(props) {
                 <Toolbar />
 
                 <Switch>
+
                     <Route path={`${path}/review`}>
                         <CustomerReview></CustomerReview>
+                    </Route>
+                    <Route path={`${path}/pay`}>
+                        <Pay></Pay>
                     </Route>
                     <Route path={`${path}/myOrder`}>
                         <MyOrder></MyOrder>
@@ -161,6 +170,9 @@ function Dashboard(props) {
                     <AdminRoute path={`${path}/manageOrders`}>
                         <ManageOrders></ManageOrders>
                     </AdminRoute>
+                    <Route >
+                        <CarShow></CarShow>
+                    </Route>
                 </Switch>
 
             </Box>

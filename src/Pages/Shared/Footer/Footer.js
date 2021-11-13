@@ -8,21 +8,21 @@ const Footer = () => {
     return (
 
         <Box>
-            <Container >
+            <Container sx={{ bgcolor: 'secondary.main', marginTop: '30px' }} >
                 <Grid container spacing={2}>
                     <Grid item sm={12} md={4}>
-                        <h2>E Hospital service point </h2>
-                        <p>Come to get better treament.</p>
+                        <h2>PISTON CAR STORE </h2>
+                        <p>Take better service.</p>
                         authority©. ALl rights reseves.
                     </Grid>
                     <Grid item sm={12} md={4}>
                         <h2>Our Services</h2>
-                        <ul className=" mx-auto">
-                            <li>Fever</li>
-                            <li>Mental Stress</li>
-                            <li>Eye</li>
-                            <li>Pregnency</li>
-                            <li>First Aid</li>
+                        <ul style={{ textAlign: 'left' }}>
+                            <li>Sedan</li>
+                            <li>Sports Car</li>
+                            <li>BMW</li>
+                            <li>Convertible</li>
+                            <li>Station Wagon</li>
                         </ul>
                     </Grid>
                     <Grid item sm={12} md={4}>

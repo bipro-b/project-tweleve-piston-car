@@ -5,7 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
-// import MenuIcon from '@mui/icons-material/Menu';
+import MenuIcon from '@mui/icons-material/Menu';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
@@ -22,14 +22,15 @@ const Navbar = () => {
                         aria-label="menu"
                         sx={{ mr: 2 }}
                     >
-                        {/* <MenuIcon /> */}
-                        <NavLink style={{ textDecoration: 'none' }} to="/home"><Button sx={{ color: "white" }} variant="text">Home</Button></NavLink>
+                        <MenuIcon />
+
 
                     </IconButton>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        <h2>Car Store</h2>
+                        <h2>PISTON CAR STORE</h2>
 
                     </Typography>
+                    <NavLink style={{ textDecoration: 'none' }} to="/home"><Button sx={{ color: "white" }} variant="text">Home</Button></NavLink>
                     <NavLink style={{ textDecoration: 'none' }} to="/cars"><Button sx={{ color: "white" }} variant="text">More Products</Button></NavLink>
 
 

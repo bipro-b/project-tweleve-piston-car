@@ -7,7 +7,7 @@ import { useParams } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 import Footer from '../Shared/Footer/Footer';
 import Navbar from '../Shared/Navbar/Navbar';
-
+import './Shipping.css'
 
 const Shipping = () => {
     const { register, handleSubmit, reset } = useForm();
@@ -58,7 +58,7 @@ const Shipping = () => {
                 </Typography>
             </Grid>
 
-            <div className="add-spot">
+            <div className="add-car">
                 <h3>Fill the purchase form</h3>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input defaultValue={carDetails?.name} {...register("name", { required: true })} />
