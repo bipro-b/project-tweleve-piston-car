@@ -17,7 +17,7 @@ const Shipping = () => {
     const [carDetails, setCarDetails] = useState({});
 
     useEffect(() => {
-        fetch('http://localhost:5000/cars')
+        fetch('https://peaceful-ridge-87447.herokuapp.com/cars')
             .then(res => res.json())
             .then(data => setDetails(data));
     }, [])
@@ -32,7 +32,7 @@ const Shipping = () => {
 
     const onSubmit = data => {
 
-        axios.post('http://localhost:5000/orders', data)
+        axios.post('https://peaceful-ridge-87447.herokuapp.com/orders', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Added successfully');

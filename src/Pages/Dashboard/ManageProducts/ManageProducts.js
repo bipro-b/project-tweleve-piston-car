@@ -5,7 +5,7 @@ import Footer from '../../Shared/Footer/Footer';
 const ManageProducts = () => {
     const [cars, setCars] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/cars')
+        fetch('https://peaceful-ridge-87447.herokuapp.com/cars')
             .then(res => res.json())
             .then(data => setCars(data));
     }, [])
@@ -14,7 +14,7 @@ const ManageProducts = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you want to delete?')
         if (proceed) {
-            const url = `http://localhost:5000/cars/${id}`;
+            const url = `https://peaceful-ridge-87447.herokuapp.com/cars/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })

@@ -8,7 +8,7 @@ const MyOrder = () => {
     const { user } = useAuth()
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/orders?email=${user.email}`)
+        fetch(`https://peaceful-ridge-87447.herokuapp.com/orders?email=${user.email}`)
             .then(res => res.json())
             .then(data => setOrders(data));
     }, [user.email])
@@ -17,7 +17,7 @@ const MyOrder = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you want to delete?')
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://peaceful-ridge-87447.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })

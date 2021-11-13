@@ -27,7 +27,7 @@ const Navbar = () => {
 
                     </IconButton>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        <h2>PISTON CAR STORE</h2>
+                        <h4>PISTON CAR STORE</h4>
 
                     </Typography>
                     <NavLink style={{ textDecoration: 'none' }} to="/home"><Button sx={{ color: "white" }} variant="text">Home</Button></NavLink>
