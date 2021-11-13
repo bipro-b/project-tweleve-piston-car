@@ -2,7 +2,7 @@ import { Alert, Button, CircularProgress, Container, Grid, TextField, Typography
 import React, { useState } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
-// import login from '../../../images/login.png'
+
 const Register = () => {
     const [loginData, setLoginData] = useState({});
     const history = useHistory();
@@ -27,8 +27,8 @@ const Register = () => {
     }
     return (
         <Container>
-            <Grid container spacing={2}>
-                <Grid item xs={12} md={6}>
+            <Grid container spacing={2} sx={{ marginTop: '50px' }}>
+                <Grid item sm={12}>
                     <Typography variant="body1" gutterBottom>
                         Register
                         {!isLoading && <form onSubmit={handleLoginSubmit}>
@@ -77,9 +77,7 @@ const Register = () => {
                         authError && <Alert severity="error">{authError}</Alert>
                     }
                 </Grid>
-                <Grid item xs={12} md={6}>
-                    <img style={{ width: "100%" }} src="" alt="" />
-                </Grid>
+
             </Grid>
         </Container>
     );

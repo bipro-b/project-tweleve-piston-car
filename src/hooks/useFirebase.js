@@ -73,7 +73,7 @@ const useFirebase = () => {
 
 
     useEffect(() => {
-        fetch(`https://peaceful-ridge-87447.herokuapp.com//users/${user.email}`)
+        fetch(`https://peaceful-ridge-87447.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])
@@ -90,7 +90,7 @@ const useFirebase = () => {
 
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('https://peaceful-ridge-87447.herokuapp.com//users', {
+        fetch('https://peaceful-ridge-87447.herokuapp.com/users', {
             method: method,
             headers: {
 

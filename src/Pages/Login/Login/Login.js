@@ -27,8 +27,8 @@ const Login = () => {
     }
     return (
         <Container>
-            <Grid container spacing={2}>
-                <Grid item xs={12} md={6}>
+            <Grid container spacing={2} sx={{ marginTop: '50px' }}>
+                <Grid item sm={12} >
                     <Typography variant="body1" gutterBottom>
                         Login
                         <form onSubmit={handleLoginSubmit}>
@@ -50,7 +50,7 @@ const Login = () => {
                                 sx={{ width: '75%', m: 1 }}
                                 type="submit"
                                 variant="contained">Login</Button>
-                            <NavLink style={{ textDecoration: 'none' }} to="register"><Button variant="text">New User? Please Register</Button></NavLink>
+                            <NavLink style={{ textDecoration: 'none' }} to="register"><Button variant="text">Are you New User? Please Register</Button></NavLink>
                         </form>
                         <p>....................</p>
                         <Button onClick={handleGoogleSignIn} variant="contained">Google Sign In</Button>
@@ -65,9 +65,7 @@ const Login = () => {
                         authError && <Alert severity="error">{authError}</Alert>
                     }
                 </Grid>
-                <Grid item xs={12} md={6}>
-                    <img style={{ width: "100%" }} src="" alt="" />
-                </Grid>
+
             </Grid>
         </Container>
     );

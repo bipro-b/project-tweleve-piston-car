@@ -43,7 +43,7 @@ const Shipping = () => {
     return (
         <>
             <Navbar></Navbar>
-            <Grid>
+            <Grid sx={{ alignItems: 'center' }}>
                 <Typography>
                     <img src={user.photoURL} alt="" />
                     <h2>Hey "{user?.displayName}" Welcome</h2>
@@ -52,7 +52,7 @@ const Shipping = () => {
                     <img style={{ width: '50%' }} src={carDetails?.img} alt="" />
 
                 </Typography>
-                <Typography>
+                <Typography style={{ margin: '0 50px 0 50px', alignItems: 'center' }}>
                     Name: {carDetails?.name} <br />
                     Car details: {carDetails?.description}
                 </Typography>
